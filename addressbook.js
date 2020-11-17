@@ -79,9 +79,14 @@ class AddressBook{
         return "\nFirstName:"+this.firstName+" ,LastName:"+this.lastName+" ,Address:"+this.address+" ,City:"+this.city+" ,State:"+this.state+" Zip:"+this.zip+" ,Phone:"+this.phone+",Email:"+this.email;
     }
 }
+//UC3-Defining an address book array and storing the addresses
+let addressArr = new Array();
 try{
-    let address = new AddressBook("Ravi","Kumar","HN02","Patna","Bihar",838372,9393932090,"rv@gmail.com");
-    console.log(address);
+    let address1 = new AddressBook("Ravi","Kumar","HN02","Patna","Bihar",838372,9393932090,"rv@gmail.com");
+    let address2= new AddressBook("Amit","Patel","HN08","Surat","Gujarat",612302,9982705303,"ap@gmail.com")
+    addressArr.push(address1);
+    addressArr.push(address2);
+    console.log(addressArr);
 }
 catch(e){
     console.error(e);
