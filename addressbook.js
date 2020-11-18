@@ -85,9 +85,11 @@ try{
     let address1 = new AddressBook("Ravi","Kumar","HN02","Patna","Bihar",838372,9393932090,"rv@gmail.com");
     let address2= new AddressBook("Amit","Patel","HN08","Surat","Gujarat",612302,9982705303,"ap@gmail.com");
     let address3= new AddressBook("Punit","Verma","HN24","Indore","MP",910234,9302920391,"pv@gmail.com");
+    let address4 = new AddressBook("Shalini","Dey","HN99","Indore","MP",122102,9130233097,"sd@gmail.com");
     addressArr.push(address1);
     addressArr.push(address2);
     addressArr.push(address3);
+    addressArr.push(address4);
     console.log(addressArr);
 }
 catch(e){
@@ -129,3 +131,6 @@ if(count=1){
 else if(count>1){
     console.log("There is duplicate entry for the given name")
 }
+//UC8-Getting person's name from a city/state
+let peopleFromCity=addressArr.filter(a=>a.city.includes("Indore"));
+console.log("People from the given city are: "+peopleFromCity);
