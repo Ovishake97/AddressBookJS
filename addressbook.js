@@ -83,9 +83,11 @@ class AddressBook{
 let addressArr = new Array();
 try{
     let address1 = new AddressBook("Ravi","Kumar","HN02","Patna","Bihar",838372,9393932090,"rv@gmail.com");
-    let address2= new AddressBook("Amit","Patel","HN08","Surat","Gujarat",612302,9982705303,"ap@gmail.com")
+    let address2= new AddressBook("Amit","Patel","HN08","Surat","Gujarat",612302,9982705303,"ap@gmail.com");
+    let address3= new AddressBook("Punit","Verma","HN24","Indore","MP",910234,9302920391,"pv@gmail.com");
     addressArr.push(address1);
     addressArr.push(address2);
+    addressArr.push(address3);
     console.log(addressArr);
 }
 catch(e){
@@ -104,4 +106,13 @@ function DeleteAddress(addressbook){
     return index;
 }
 let deleteIndex=addressArr.find(DeleteAddress);
-console.log(addressArr.splice(deleteIndex,1)+" is deleted")
+console.log(addressArr.splice(deleteIndex,1)+" is deleted");
+//UC6-Getting count of total address 
+let n=0;
+function GetTotal(a){
+   if(a!=null){
+       ++n;
+   }
+   return n;
+}
+console.log("Total count of addresses "+addressArr.reduce(GetTotal,0));
