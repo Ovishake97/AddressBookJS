@@ -144,5 +144,12 @@ console.log(addressCityMap);
 //UC10-Getting count of people living in a city/state
 console.log("Number of people from that city is: "+peopleFromCity.length);
 //UC11-Sorting the address book according to person's name
-let sortedArray = addressArr.sort(a=>a.firstName);
+let sortedArray = addressArr.sort((a,b)=>a.firstName.localeCompare(b.firstName));
 console.log(sortedArray);
+//UC12 -Sorting the address book according to city,state or zip
+let sortedArray_state= addressArr.sort((a,b)=>a.state.localeCompare(b.state));
+console.log(sortedArray_state);
+let sortedArray_city = addressArr.sort((a,b)=>a.city.localeCompare(b.city));
+console.log(sortedArray_city);
+let sortedArray_zip = addressArr.sort((a,b)=>(a.zip>b.zip)?1:(b.zip>a.zip)?-1:0);
+console.log(sortedArray_zip);
