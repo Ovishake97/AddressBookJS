@@ -143,3 +143,6 @@ console.log("Viewing the people by their city")
 console.log(addressCityMap);
 //UC10-Getting count of people living in a city/state
 console.log("Number of people from that city is: "+peopleFromCity.length);
+//UC11-Sorting the address book according to person's name
+let sortedArray = addressArr.sort(a=>a.firstName);
+console.log(sortedArray);
